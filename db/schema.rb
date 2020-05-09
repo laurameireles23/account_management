@@ -14,15 +14,14 @@ ActiveRecord::Schema.define(version: 20200508194052) do
 
   create_table "accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "account"
-    t.float "balance", limit: 24
+    t.integer "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "transactions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "account"
-    t.float "value", limit: 24
-    t.integer "type"
+    t.integer "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
