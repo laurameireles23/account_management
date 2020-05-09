@@ -1,9 +1,8 @@
 namespace :import_account do
   require 'csv'
 
-  desc "Imports a CSV file into an ActiveRecord table"
-  errors = false
-  file = 'db\contas.csv'
+  desc "Imports a 'contas.csv' file into an ActiveRecord table"
+  file = ('db\contas.csv')
   task :import_csv => :environment do
     File.open(file).each do |row|
       begin
@@ -13,16 +12,12 @@ namespace :import_account do
         balance = row[1].strip.to_i
 
         Account.create!(account: account, balance: balance)
+
+        puts "Importação de conta feita com sucesso :)"
       rescue => exception
         puts exception
-        errors = true
+        puts "A importação falhou, tente novamente!"
       end
     end
-  end
-
-  if errors == false
-    puts "Importação feita com sucesso :)"
-  else
-    puts "A importação falhou, tente novamente!"
   end
 end
