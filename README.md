@@ -1,24 +1,8 @@
-# README
+Comandos:
+  rails db:create --> para criar os bancos
+  rails db:migrate --> para executar as migrações
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  As contas e saldos estão no arquivo contas.csv
+  As contas e transações estão no arquivo transacoes.csv
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  bundle exec rake "import:imports[contas.csv , transacoes.csv]" --> importa e executa as operações bancarias com base nos dados das tabelas Transactions e Accounts.
