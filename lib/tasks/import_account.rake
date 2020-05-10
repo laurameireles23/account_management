@@ -8,16 +8,15 @@ namespace :import_account do
       begin
         row = row.split(",")
 
-        account = row[0].strip.to_i
+        number = row[0].strip.to_i
         balance = row[1].strip.to_i
 
-        Account.create!(account: account, balance: balance)
-
-        puts "Importação de conta feita com sucesso :)"
+        Account.create!(number: number, balance: balance)
       rescue => exception
         puts exception
         puts "A importação falhou, tente novamente!"
       end
     end
+    puts "Importação de conta feita com sucesso :)"
   end
 end
