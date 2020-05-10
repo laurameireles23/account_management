@@ -12,12 +12,11 @@ namespace :import_transaction do
         value = row[1].strip.to_i
 
         Transaction.create!(account: account, value: value)
-
-        puts "Importação de transação feita com sucesso :)"
       rescue => exception
         puts exception
         puts "A importação falhou, tente novamente!"
       end
     end
+    puts "Importação de transação feita com sucesso :)"
   end
 end
