@@ -6,7 +6,7 @@ namespace :import do
       "import_account:import_csv[#{args[:account_file]}]"
     )
     Rake.application.invoke_task(
-      "import_transaction:import_csv[#{args[:account_file]}]"
+      "import_transaction:import_csv[#{args[:transaction_file]}]"
     )
     Rake.application.invoke_task(
       'management:managements'

@@ -6,10 +6,8 @@ namespace :import_transaction do
   desc "Imports a 'transacoes.csv' file into an ActiveRecord table"
   task :import_csv, [:file] => :environment do |_t, args|
     file = Rails.root.join('app', args[:file])
-    File.open(file).each do |row|
+    CSV.foreach(file) do |row|
       begin
-        row = row.split(',')
-
         account = row[0].strip.to_i
         value = row[1].strip.to_i
 
