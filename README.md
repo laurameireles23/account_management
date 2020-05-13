@@ -61,8 +61,8 @@ O mesmo importa e executa as operações bancarias com base nos dados das tabela
 
 Foram utilizadas as gems:
 * Rails - Utilizado para acelerar o desenvolvimento, pois promove muitas facilidades no desenvolvimento;
-* Capybara - Uitilizado para a criação dos testes, pois é uma ótima ferramenta para utilizar em testes, automação, entre outras utilidades. Com ele é possível testar as aplicações simulando as ações que os usuários reais executariam.
 * Rubocop - Usado para a padronização de codigo.
+* MySql - Para utilizar o banco de dados MySql.
 
 
 ## Autores
