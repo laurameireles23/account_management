@@ -7,28 +7,20 @@ Esta aplicação é o resultado de um teste enviado pela empresa Iugu, onde deve
 
 Para este projeto funcionar, os seguintes pré requisitos devem ser atendidos:
 
-```
 - Ter instalado o Ruby (versão utilizada: 2.3.3);
 - Ter instalado o Rails (versão utilizada: 5.1.7);
 - Ter instalado o MySql;
 - Ter instalado o bundle;
-```
 
 ### Instalando
 
-Para instalar este projeto basta seguir os seguintes passos:
+Para instalar, após clonar, basta rodar os comandos abaixo:
 
 ```
-- Clonar este projeto;
-```
-
-Após clonar, basta rodar os comandos abaixo:
-
-```
-- bundle
-- rails db:create
-- rails db:migrate
-- rails db:migrate RAILS_ENV= test (para rodar a base de testes)
+$ bundle
+$ rails db:create
+$ rails db:migrate
+$ rails db:migrate RAILS_ENV= test (para rodar a base de testes)
 ```
 
 Após estes comandos, seu projeto estará pronto para uso :)
@@ -37,8 +29,8 @@ Após estes comandos, seu projeto estará pronto para uso :)
 Caso tenha erros ao tentar criar o banco, rodar os seguintes comandos(os mesmos funcionaram no windows):
 
 ```
-- mysql -u root -p -h localhost
-- ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY '1234';
+$ mysql -u root -p -h localhost
+$ ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY '1234';
 ```
 
 ## Iniciando
@@ -52,7 +44,7 @@ Para facilitar o teste, foram criados dois arquivos na pasta app do projeto, o c
 ## Como testar
 Para testar basta executar o seguinte comando:
 ```
-bundle exec rake "import:imports[contas.csv, transacoes.csv]"
+$ bundle exec rake "import:imports[contas.csv, transacoes.csv]"
 ```
 
 O mesmo importa e executa as operações bancarias com base nos dados das tabelas Transactions e Accounts.
